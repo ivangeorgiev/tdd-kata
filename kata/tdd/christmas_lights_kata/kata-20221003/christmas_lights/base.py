@@ -1,0 +1,2 @@
+BULB_OFF = 0
+BULB_ON = 1
