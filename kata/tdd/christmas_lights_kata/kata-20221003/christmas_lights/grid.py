@@ -82,8 +82,5 @@ class Grid:
         self._bulb_states[row][col] = self.operator.turn_off(current_state)
 
     def toggle(self, row: int, col: int):
-        bulb_state = self._bulb_states[row][col]
-        if bulb_state == BULB_ON:
-            self._bulb_states[row][col] = BULB_OFF
-        else:
-            self._bulb_states[row][col] = BULB_ON
+        current_state = self._bulb_states[row][col]
+        self._bulb_states[row][col] = self.operator.toggle(current_state)
