@@ -1,0 +1,11 @@
+# Christmas Lights Instructions Kata
+
+## Execute Santa's Instructions
+
+In the "Christmas Lights Kata", santa gave us a list of instructions. E.g.:
+
+* turn on 887,9 through 959,629
+* turn off 539,243 through 559,965
+* toggle 831,394 through 904,860
+
+The goal is to be able to read Santa's instructions from a text file and execute them.
