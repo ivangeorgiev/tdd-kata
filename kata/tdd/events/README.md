@@ -4,7 +4,7 @@
 
 ### Creating an event observer registry
 
-Create `Events` class instance to create event observer registry:
+Create `Events` class instance to create event registry:
 
 ```python
 >>> from events import Events
