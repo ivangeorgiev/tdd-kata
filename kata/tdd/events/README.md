@@ -2,7 +2,7 @@
 
 ## Usage
 
-### Creating event observer registry
+### Creating an event observer registry
 
 Create `Events` class instance to create event observer registry:
 
