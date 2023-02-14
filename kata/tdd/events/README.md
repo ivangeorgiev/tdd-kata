@@ -1,4 +1,8 @@
-Implement Event Observer Registry in Python
+# Event Observer Registry in Python
+
+## Usage
+
+Use `Events` class as observer registry. To add observer to an event, use the `+=` operator.
 
 ```python
 from events import Events
