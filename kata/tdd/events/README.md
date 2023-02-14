@@ -24,7 +24,7 @@ To subscribe an observer to an event, use the `+=` operator:
 
 ### Handle an event
 
-To handle an event, call the event slot:
+To handle an event, call the event slot. This will notify all event observers. Arguments passed to the event slot are passed also to the observers:
 
 ```python
 >>> events.onclick('Hi there')
