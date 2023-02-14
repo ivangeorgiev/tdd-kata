@@ -1,8 +1,8 @@
-# Event Observer Registry in Python
+# Event Publish/Subscribe in Python
 
 ## Usage
 
-### Creating an event observer registry
+### Creating an event registry
 
 Create `Events` class instance to create event registry:
 
