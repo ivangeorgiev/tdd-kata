@@ -27,3 +27,8 @@ def fizbuzz2(n):
         result = str(n)
     return result
 
+def fizbuzz3(n):
+    divisors = ( (3, "Fizz"), (5, "Buzz") )
+    result = "".join(word for divisor, word in divisors if n % divisor == 0)
+    return result or str(n)
+
