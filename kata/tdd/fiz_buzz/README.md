@@ -1,0 +1,1 @@
+Write a Python function that given a positive integer number, returns a string "Fizz" if the number is multiply of three, "Buzz" if the number is multiply of five, "FizzBuzz" if the number is multiple of three and five, the number otherwise.
