@@ -1,22 +1,29 @@
 '''
+# Smallest window to sort kata
 
-Test cases:
+## Kata
 
-  - empty array
+Given an array of integers that are out of order, determine the bounds of the smallest 
+window that must be sorted in order for the entire array to be sorted. For example, 
+given `[ 3 , 7 , 5 , 6 , 9]` , you should return `( 1 , 3 )` . 
+
+## Test cases:
+
+  - empty array\
     [] -> (None, None)
-  - array with one element
+  - array with one element\
     [10] -> (None, None)
-  - already sorted array
+  - already sorted array\
     [1, 2, 3, 4, 5] -> (None, None)
-  - reverse sorted array
+  - reverse sorted array\
     [5, 4, 3, 2, 1] -> (0, 4)
-  - array with same element
+  - array with same element\
     [7, 7, 7, 7, 7, 7] -> (None, None)
-  - array with two elements in the middle out of order
+  - array with two elements in the middle out of order\
     [1, 2, 4, 3, 5] -> (2, 3)
-  - array with elements out of order at the beginning
+  - array with elements out of order at the beginning\
     [2, 1, 3, 4, 5] -> (0, 1)
-  - array with repeated elements
+  - array with repeated elements\
     [1, 5, 5, 4, 3, 3, 6] -> (1, 5)
 '''
 import unittest
