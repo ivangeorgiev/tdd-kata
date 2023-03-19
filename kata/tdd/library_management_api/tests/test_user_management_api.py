@@ -4,24 +4,24 @@ from unittest.mock import patch
 
 from fastapi.testclient import TestClient
 
+from ..libman import schemas
 from ..libman.exceptions import AlreadyExists, DoesNotExist
-from ..libman.models import User
+from ..libman.schemas import User
 from ..libman.repository import UserRepository
 from ..main import app, user_repository
 
 test_user = User(
     username="testuser",
     email="testuser@example.com",
-    password="password",
     full_name="Test User",
 )
-create_user = User(
+create_user = schemas.UserCreate(
     username="createduser",
     email="createduser@example.com",
     password="mypassword",
     full_name="my-name",
 )
-update_user = User(
+update_user = schemas.UserUpdate(
     username="testuser",
     email="testuser@example.com",
     password="newpassword",
@@ -82,7 +82,7 @@ class TestCreateUserAPI(UserAPITestCase):
     def test_should_return_CONFLICT_user_already_exists(self):
         with patch.object(MockUserRepository, "create_user") as create_user_mock:
             create_user_mock.side_effect = AlreadyExists("User 'testuser' already exists.")
-            response = self.client.post("/users/", json=update_user.dict())
+            response = self.client.post("/users/", json=create_user.dict())
             self.assertEqual(
                 response.json(), {"message": "User 'testuser' already exists."}
             )

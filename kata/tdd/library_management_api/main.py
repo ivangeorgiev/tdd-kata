@@ -2,7 +2,8 @@ from http import HTTPStatus
 from fastapi import FastAPI, Request, Depends
 from fastapi.responses import JSONResponse
 
-from .libman.models import User
+from .libman import schemas
+from .libman.schemas import User
 from .libman.exceptions import AlreadyExists, DoesNotExist
 from .libman.repository import UserRepository
 from .libman.repository.inmemory import InMemoryUserRepository
@@ -29,7 +30,7 @@ async def handle_already_exists_exception(request: Request, exc: AlreadyExists):
 
 
 @app.post("/users/")
-async def create_user(user: User, user_repository:UserRepository=Depends(user_repository)):
+async def create_user(user: schemas.UserCreate, user_repository:UserRepository=Depends(user_repository)):
     user_repository.create_user(user)
     return JSONResponse(status_code=HTTPStatus.CREATED, content={"result": "OK"})
 
@@ -42,6 +43,6 @@ async def list_users(user_repository:UserRepository=Depends(user_repository)):
     return user_repository.list_users()
 
 @app.put("/users/{username}")
-async def update_user(username: str, user: User, user_repository:UserRepository=Depends(user_repository)):
+async def update_user(username: str, user: schemas.UserUpdate, user_repository:UserRepository=Depends(user_repository)):
     user_repository.update_user(username, user)
     return JSONResponse(status_code=HTTPStatus.ACCEPTED, content={"result": "ACCEPTED"})

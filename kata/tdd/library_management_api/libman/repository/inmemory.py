@@ -1,4 +1,4 @@
-from ..models import User
+from ..schemas import User
 from ..exceptions import AlreadyExists, ERR_USER_ALREADY_EXISTS, DoesNotExist, ERR_USER_DOES_NOT_EXISTS
 from ._base import UserRepository
 
