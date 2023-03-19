@@ -1,12 +1,13 @@
-from http import HTTPStatus
 import unittest
+from http import HTTPStatus
 from unittest.mock import patch
+
 from fastapi.testclient import TestClient
 
-from ..main import app, user_repository
+from ..libman.exceptions import AlreadyExists, DoesNotExist
 from ..libman.models import User
 from ..libman.repository import UserRepository
-from ..libman.exceptions import AlreadyExists, DoesNotExist
+from ..main import app, user_repository
 
 test_user = User(
     username="testuser",

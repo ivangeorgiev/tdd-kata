@@ -4,7 +4,8 @@ from fastapi.responses import JSONResponse
 
 from .libman.models import User
 from .libman.exceptions import AlreadyExists, DoesNotExist
-from .libman.repository import UserRepository, InMemoryUserRepository
+from .libman.repository import UserRepository
+from .libman.repository.inmemory import InMemoryUserRepository
 
 app = FastAPI()
 
