@@ -70,3 +70,8 @@ Implement as many of the requirements as you find appropriate to demonstrate eno
 Application should be provided in a code repository (github?) or code dump with a README file explaining how to start the application.
 
 Ability to disucss how the requirements are implemented and/or are going to be implemented is curcial.
+
+
+Hint:
+Described problem was solved using ChatGPT in about 3 hours. See https://github.com/ivangeorgiev/tdd-kata/tree/main/kata/tdd/drf-developer/gptsolution/
+
