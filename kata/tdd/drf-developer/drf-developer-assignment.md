@@ -73,5 +73,5 @@ Ability to disucss how the requirements are implemented and/or are going to be i
 
 
 Hint:
-Described problem was solved using ChatGPT in about 3 hours. See https://github.com/ivangeorgiev/tdd-kata/tree/main/kata/tdd/drf-developer/gptsolution/
+The described problem was solved using ChatGPT between 2.5 and 3 hours wihout rush. See https://github.com/ivangeorgiev/tdd-kata/tree/main/kata/tdd/drf-developer/gptsolution/
 
